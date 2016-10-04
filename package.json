@@ -1,0 +1,35 @@
+{
+  "name": "jaotors",
+  "version": "1.0.0",
+  "description": "Joshua B. Turingan's Portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "jquery": "^3.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaotors/jaotors.github.io.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Joshua",
+    "Turingan"
+  ],
+  "author": "Joshua B. Turingan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaotors/jaotors.github.io/issues"
+  },
+  "homepage": "https://github.com/jaotors/jaotors.github.io#readme"
+}
