@@ -4,10 +4,10 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
-	css = 'resources/css',
-	js = 'resources/js',
-	fonts = 'resources/fonts',
-	images = 'resources/images';
+	css = 'public/css',
+	js = 'public/js',
+	fonts = 'public/fonts',
+	images = 'public/images';
 
 gulp.task('components', function() {
 
@@ -47,14 +47,14 @@ gulp.task('scripts', function() {
 gulp.task('serve', ['components', 'styles', 'images', 'scripts'], function() {
 
 	browserSync.init({
-		server: "./",
+		server: "./public",
 		notify: false
 	});
 
 	gulp.watch('assets/sass/*', ['styles']).on('change', browserSync.reload);
 	gulp.watch('assets/js/*', ['scripts']).on('change', browserSync.reload);;
 	gulp.watch('assets/images/*', ['images']).on('change', browserSync.reload);;
-	gulp.watch('*.html').on('change', browserSync.reload)
+	gulp.watch('public/*.html').on('change', browserSync.reload)
 
 });
 
