@@ -4,10 +4,10 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
-	css = 'public/css',
-	js = 'public/js',
-	fonts = 'public/fonts',
-	images = 'public/images';
+	css = 'resources/css',
+	js = 'resources/js',
+	fonts = 'resources/fonts',
+	images = 'resources/images';
 
 gulp.task('components', function() {
 
@@ -15,13 +15,17 @@ gulp.task('components', function() {
 	gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
 		.pipe(gulp.dest(css));
 
+	/* font-awesome */
+	gulp.src('node_modules/font-awesome/fonts/*')
+		.pipe(gulp.dest(fonts));
+
 	/* jquery */
 	gulp.src('node_modules/jquery/dist/jquery.min.js')
 		.pipe(gulp.dest(js));
 
-	/* font-awesome */
-	gulp.src('node_modules/font-awesome/fonts/*')
-		.pipe(gulp.dest(fonts));
+	/* chart.js */
+	gulp.src('node_modules/chart.js/dist/Chart.min.js')
+		.pipe(gulp.dest(js));
 });
 
 gulp.task('images', function() {
@@ -54,7 +58,7 @@ gulp.task('serve', ['components', 'styles', 'images', 'scripts'], function() {
 	gulp.watch('assets/sass/*', ['styles']).on('change', browserSync.reload);
 	gulp.watch('assets/js/*', ['scripts']).on('change', browserSync.reload);;
 	gulp.watch('assets/images/*', ['images']).on('change', browserSync.reload);;
-	gulp.watch('public/*.html').on('change', browserSync.reload)
+	gulp.watch('*.html').on('change', browserSync.reload)
 
 });
 
