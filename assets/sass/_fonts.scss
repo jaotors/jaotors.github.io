@@ -1,0 +1,16 @@
+@mixin font-face($name) {
+	font-family: $name;
+	src: url('../fonts/' + $name + '.otf');
+}
+
+@font-face {
+	@include font-face("Quicksand_Book");
+}
+
+@font-face {
+	@include font-face("Quicksand_Bold");
+}
+
+@font-face {
+	@include font-face("Quicksand_Light");
+}

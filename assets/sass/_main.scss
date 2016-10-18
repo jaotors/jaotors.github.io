@@ -1,0 +1,58 @@
+body {
+	font-family: Quicksand_Book;
+	background-color: #f9f0ff;
+}
+
+main {
+	overflow: hidden;
+}
+
+svg {
+
+	&.JTsvg {
+		width: 343px;
+	}
+
+	.cls-1 {
+		fill: #232323;
+		fill-rule: evenodd;
+	}
+}
+
+section {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	%centering {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.landing {
+
+		.JTsvg {
+			@extend %centering;
+		}
+	}
+
+	&.home {
+
+		.logo {
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		p {
+			@extend %centering;
+
+			top: 63.5%;
+			text-align: center;
+			font-size: 20px;
+		}
+	}
+}

@@ -30,13 +30,23 @@ gulp.task('components', function() {
 
 gulp.task('images', function() {
 	return gulp.src('assets/images/*')
-		.pipe(gulp.dest(images))
+		.pipe(gulp.dest(fonts))
 		.pipe(browserSync.stream());
 });
 
+gulp.task('fonts', function() {
+	return gulp.src('assets/fonts/*')
+		.pipe(gulp.dest(fonts));
+});
+
+function handleError(err) {
+	console.log(err.toString());
+	this.emit('end')
+}
+
 gulp.task('styles', function() {
 	return gulp.src('assets/sass/app.scss')
-		.pipe(sass()).on('error', function(error) {console.log('ERROR ' + error.message + '\n\n');})
+		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({browsers: ['last 2 versions']}))
 		.pipe(gulp.dest(css))
 		.pipe(browserSync.stream());
@@ -48,10 +58,10 @@ gulp.task('scripts', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['components', 'styles', 'images', 'scripts'], function() {
+gulp.task('serve', ['components', 'fonts', 'styles', 'images', 'scripts'], function() {
 
 	browserSync.init({
-		server: "./public",
+		server: "./",
 		notify: false
 	});
 
