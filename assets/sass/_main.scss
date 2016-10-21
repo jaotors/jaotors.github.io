@@ -19,10 +19,15 @@ svg {
 	}
 }
 
+%none {
+	display: none;
+}
+
 section {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	padding: 138px 0;
 
 	%centering {
 		position: absolute;
@@ -31,7 +36,14 @@ section {
 		transform: translate(-50%, -50%);
 	}
 
+	.inner {
+		display: block;
+		margin: 0 auto;
+		width: 820px;
+	}
+
 	&.landing {
+		@extend %none;
 
 		.JTsvg {
 			@extend %centering;
@@ -39,12 +51,11 @@ section {
 	}
 
 	&.home {
+		@extend %none;
 
 		.logo {
-			position: absolute;
-			top: 40%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@extend %centering;
+			top: 38%;
 		}
 
 		p {
@@ -55,4 +66,110 @@ section {
 			font-size: 20px;
 		}
 	}
+
+	&.portfolio {
+
+		.sec-tabs {
+			@extend %clearfix;
+
+			display: flex;
+			padding-left: 0;
+			margin-bottom: 20px;
+			border-bottom: 1px solid #383838;
+			list-style-type: none;
+
+			li {
+
+				&:first-child {
+
+					a {
+						padding-left: 0px;
+					}
+				}
+
+				&.active {
+					a {
+						box-shadow: 0 1px 0 #f9f0ff,
+									1px 0 0 $def-color,
+									1px -1px 0 $def-color,
+									1px -1px 0 $def-color,
+									-1px 0 0 $def-color,
+									-1px -1px 0 $def-color;
+						font-family: Quicksand_Book;
+					}
+
+					&:first-child {
+
+						a {
+							box-shadow: 0 1px 0 #f9f0ff,
+										1px 0 0 $def-color,
+										1px -1px 0 $def-color,
+										1px -1px 0 $def-color,
+										-1px 0 0 #f9f0ff,
+										-1px -1px 0 #f9f0ff;
+
+						}
+
+					}
+				}
+
+				a {
+					display: block;
+					padding: 10px 10px 0 10px;
+					font-size: 30px;
+					text-decoration: none;
+					display: block;
+					text-transform: uppercase;
+					color: $def-color;
+					font-family: Quicksand_Light;
+
+					&:hover {
+						color: inherit;
+						font-family: Quicksand_Book;
+					}
+				}
+			}
+		}
+
+		.container-tabs {
+
+			ul {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				list-style-type: none;
+				padding: 0;
+				margin-bottom: 0;
+
+				li {
+					width: 32%;
+					border: 1px solid $def-color;
+					margin-bottom: 20px;
+				}
+
+				a {
+					text-decoration: none;
+					color: $def-color;
+				}
+
+				span {
+					display: block;
+
+					&.pic {
+						
+						width: 100%;
+						background-color: $def-color;
+						height: 176px;
+					}
+
+					&.title {
+						padding: 5px;
+					}
+				}
+			}
+
+		}
+	}
+
+	
 }
