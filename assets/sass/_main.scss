@@ -1,3 +1,7 @@
+* {
+	transition: 0.3s;
+}
+
 body {
 	font-family: Quicksand_Book;
 	background-color: #f9f0ff;
@@ -27,7 +31,9 @@ section {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	padding: 138px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	%centering {
 		position: absolute;
@@ -42,16 +48,8 @@ section {
 		width: 820px;
 	}
 
-	&.landing {
-		@extend %none;
-
-		.JTsvg {
-			@extend %centering;
-		}
-	}
-
 	&.home {
-		@extend %none;
+		
 
 		.logo {
 			@extend %centering;
@@ -61,7 +59,7 @@ section {
 		p {
 			@extend %centering;
 
-			top: 63.5%;
+			top: 65%;
 			text-align: center;
 			font-size: 20px;
 		}
@@ -150,6 +148,12 @@ section {
 				a {
 					text-decoration: none;
 					color: $def-color;
+
+					.pic {
+						&:hover {
+							background-color: #f9f0ff;
+						}
+					}
 				}
 
 				span {
@@ -163,7 +167,9 @@ section {
 					}
 
 					&.title {
+						border-top: 1px solid $def-color;
 						padding: 5px;
+						text-align: center;
 					}
 				}
 			}

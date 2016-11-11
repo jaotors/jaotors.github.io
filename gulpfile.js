@@ -26,6 +26,10 @@ gulp.task('components', function() {
 	/* chart.js */
 	gulp.src('node_modules/chart.js/dist/Chart.min.js')
 		.pipe(gulp.dest(js));
+
+	/* fullpage.js */
+	gulp.src('node_modules/fullpage.js/dist/jquery.fullpage.min.js')
+		.pipe(gulp.dest(js));
 });
 
 gulp.task('images', function() {

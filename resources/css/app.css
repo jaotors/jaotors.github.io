@@ -1,0 +1,124 @@
+/*
+********************************************************************
+****** 161022 ******************************************************
+****** MY PORTFOLIO; ***********************************************
+****** Coded by Joshua B. Turingan; ********************************
+****** using Bootstrap framework; **********************************
+********************************************************************
+*/
+@font-face {
+  font-family: "Quicksand_Book";
+  src: url("../fonts/Quicksand_Book.otf"); }
+
+@font-face {
+  font-family: "Quicksand_Bold";
+  src: url("../fonts/Quicksand_Bold.otf"); }
+
+@font-face {
+  font-family: "Quicksand_Light";
+  src: url("../fonts/Quicksand_Light.otf"); }
+
+section.portfolio .sec-tabs:before, section.portfolio .sec-tabs:after {
+  content: ' ';
+  display: table; }
+
+section.portfolio .sec-tabs:after {
+  clear: both; }
+
+* {
+  transition: 0.3s; }
+
+body {
+  font-family: Quicksand_Book;
+  background-color: #f9f0ff; }
+
+main {
+  overflow: hidden; }
+
+svg.JTsvg {
+  width: 343px; }
+
+svg .cls-1 {
+  fill: #232323;
+  fill-rule: evenodd; }
+
+section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  section.home .logo, section.home p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  section .inner {
+    display: block;
+    margin: 0 auto;
+    width: 820px; }
+  section.home .logo {
+    top: 38%; }
+  section.home p {
+    top: 65%;
+    text-align: center;
+    font-size: 20px; }
+  section.portfolio .sec-tabs {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #383838;
+    list-style-type: none; }
+    section.portfolio .sec-tabs li:first-child a {
+      padding-left: 0px; }
+    section.portfolio .sec-tabs li.active a {
+      box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #232323, -1px -1px 0 #232323;
+      font-family: Quicksand_Book; }
+    section.portfolio .sec-tabs li.active:first-child a {
+      box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #f9f0ff, -1px -1px 0 #f9f0ff; }
+    section.portfolio .sec-tabs li a {
+      display: block;
+      padding: 10px 10px 0 10px;
+      font-size: 30px;
+      text-decoration: none;
+      display: block;
+      text-transform: uppercase;
+      color: #232323;
+      font-family: Quicksand_Light; }
+      section.portfolio .sec-tabs li a:hover {
+        color: inherit;
+        font-family: Quicksand_Book; }
+  section.portfolio .container-tabs ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0; }
+    section.portfolio .container-tabs ul li {
+      width: 32%;
+      border: 1px solid #232323;
+      margin-bottom: 20px; }
+    section.portfolio .container-tabs ul a {
+      text-decoration: none;
+      color: #232323; }
+      section.portfolio .container-tabs ul a .pic:hover {
+        background-color: #f9f0ff; }
+    section.portfolio .container-tabs ul span {
+      display: block; }
+      section.portfolio .container-tabs ul span.pic {
+        width: 100%;
+        background-color: #232323;
+        height: 176px; }
+      section.portfolio .container-tabs ul span.title {
+        border-top: 1px solid #232323;
+        padding: 5px;
+        text-align: center; }
