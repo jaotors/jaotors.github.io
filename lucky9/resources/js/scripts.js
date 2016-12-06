@@ -52,7 +52,6 @@ $(document).ready(function() {
 
 	function getRandom() {
 		var number = Math.floor(Math.random() * (13));
-		console.log(number);
 		return number;
 	}
 
