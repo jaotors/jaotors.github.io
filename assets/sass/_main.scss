@@ -1,181 +1,345 @@
 * {
-	transition: 0.3s;
+  transition: 0.3s;
 }
 
 body {
-	font-family: Quicksand_Book;
-	background-color: #f9f0ff;
+  font-family: Quicksand;
+  background-color: $hl-color;
 }
 
 main {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 svg {
 
-	&.JTsvg {
-		width: 343px;
-	}
+  &.JTsvg {
+    width: 343px;
+  }
 
-	.cls-1 {
-		fill: #232323;
-		fill-rule: evenodd;
-	}
+  .cls-1 {
+    fill: #232323;
+    fill-rule: evenodd;
+  }
 }
 
 %none {
-	display: none;
+  display: none;
+}
+
+.nav-menu {
+  @extend %clearfix;
+
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+
+  ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: transparent;
+        text-decoration: none;
+        padding-left: 25px;
+
+        &:hover {
+          color: $def-color;
+        }
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 6px;
+          transform: translateY(-50%);
+          height: 13px;
+          width: 13px;
+          border-radius: 50%;
+          border: 1px solid $def-color;
+          content: ' ';
+        }
+
+      }
+
+      &.active {
+        a {
+
+          color: $def-color;
+
+          &:before {
+            background-color: $def-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 section {
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	%centering {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+  %centering {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-	.inner {
-		display: block;
-		margin: 0 auto;
-		width: 820px;
-	}
+  .inner {
+    display: block;
+    margin: 0 auto;
+    width: 820px;
+  }
 
-	&.home {
-		
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-		.logo {
-			@extend %centering;
-			top: 38%;
-		}
+  &.home {
+    
+    .logo-container {
+      @extend %centering;
 
-		p {
-			@extend %centering;
+      h1 {
+        text-align: center;
+      }
+    }
 
-			top: 65%;
-			text-align: center;
-			font-size: 20px;
-		}
-	}
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
 
-	&.portfolio {
+  &.portfolio {
 
-		.sec-tabs {
-			@extend %clearfix;
+    .sec-tabs {
+      @extend %clearfix;
 
-			display: flex;
-			padding-left: 0;
-			margin-bottom: 20px;
-			border-bottom: 1px solid #383838;
-			list-style-type: none;
+      display: flex;
+      padding-left: 0;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #383838;
+      list-style-type: none;
 
-			li {
+      li {
 
-				&:first-child {
+        &:first-child {
 
-					a {
-						padding-left: 0px;
-					}
-				}
+          a {
+            padding-left: 0px;
+          }
+        }
 
-				&.active {
-					a {
-						box-shadow: 0 1px 0 #f9f0ff,
-									1px 0 0 $def-color,
-									1px -1px 0 $def-color,
-									1px -1px 0 $def-color,
-									-1px 0 0 $def-color,
-									-1px -1px 0 $def-color;
-						font-family: Quicksand_Book;
-					}
+        &.active {
+          a {
+            box-shadow: 0 1px 0 $hl-color,
+                  1px 0 0 $def-color,
+                  1px -1px 0 $def-color,
+                  1px -1px 0 $def-color,
+                  -1px 0 0 $def-color,
+                  -1px -1px 0 $def-color;
+                  font-weight: normal;
+          }
 
-					&:first-child {
+          &:first-child {
 
-						a {
-							box-shadow: 0 1px 0 #f9f0ff,
-										1px 0 0 $def-color,
-										1px -1px 0 $def-color,
-										1px -1px 0 $def-color,
-										-1px 0 0 #f9f0ff,
-										-1px -1px 0 #f9f0ff;
+            a {
+              box-shadow: 0 1px 0 $hl-color,
+                    1px 0 0 $def-color,
+                    1px -1px 0 $def-color,
+                    1px -1px 0 $def-color,
+                    -1px 0 0 $hl-color,
+                    -1px -1px 0 $hl-color;
 
-						}
+            }
 
-					}
-				}
+          }
+        }
 
-				a {
-					display: block;
-					padding: 10px 10px 0 10px;
-					font-size: 30px;
-					text-decoration: none;
-					display: block;
-					text-transform: uppercase;
-					color: $def-color;
-					font-family: Quicksand_Light;
+        a {
+          display: block;
+          padding: 10px 10px 0 10px;
+          font-size: 27px;
+          text-decoration: none;
+          display: block;
+          text-transform: uppercase;
+          color: $def-color;
+          font-weight: 300;
 
-					&:hover {
-						color: inherit;
-						font-family: Quicksand_Book;
-					}
-				}
-			}
-		}
+          &:hover {
+            color: inherit;
+            font-weight: normal;
+          }
+        }
+      }
+    }
 
-		.container-tabs {
+    .container-tabs {
 
-			ul {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				list-style-type: none;
-				padding: 0;
-				margin-bottom: 0;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
 
-				li {
-					width: 32%;
-					border: 1px solid $def-color;
-					margin-bottom: 20px;
-				}
+        li {
+          width: 32%;
+          border: 1px solid $def-color;
+          margin-bottom: 20px;
+        }
 
-				a {
-					text-decoration: none;
-					color: $def-color;
+        a {
+          text-decoration: none;
+          color: $def-color;
 
-					.pic {
-						&:hover {
-							background-color: #f9f0ff;
-						}
-					}
-				}
+          .pic {
+            &:hover {
+              background-color: $hl-color;
+            }
+          }
+        }
 
-				span {
-					display: block;
+        span {
+          display: block;
 
-					&.pic {
-						
-						width: 100%;
-						background-color: $def-color;
-						height: 176px;
-					}
+          &.pic {
+            
+            width: 100%;
+            background-color: $def-color;
+            height: 176px;
+          }
 
-					&.title {
-						border-top: 1px solid $def-color;
-						padding: 5px;
-						text-align: center;
-					}
-				}
-			}
+          &.title {
+            border-top: 1px solid $def-color;
+            padding: 5px;
+            text-align: center;
+          }
+        }
+      }
 
-		}
-	}
+    }
+  }
 
-	
+  &.skillset {
+
+    .sub-text {
+      border-bottom: 1px solid $def-color;
+      font-size: 13px;
+    }
+
+    .link-text {
+      font-size: 13px;
+
+      a {
+        color: $def-color;
+        font-weight: bold;
+        font-size: 14px;
+
+      }
+    }
+
+    .chart-container {
+      margin-bottom: 15px;
+    }
+  }
+
+  &.contact {
+
+    .contact-info {
+      margin-top: 29px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    .bordered {
+      display: block;
+      padding: 12px;
+      margin-bottom: 20px;
+      background-color: $def-color;
+      border: 1px solid $def-color;
+      color: $hl-color;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $hl-color;
+        color: $def-color;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .form-container {
+      input,
+      textarea {
+        appearance: none;
+        border: 1px solid $def-color;
+        width: 100%;
+        background-color: transparent;
+        padding: 10px 5px;
+        font-size: 12px;
+        margin-bottom: 15px;
+
+        &::placeholder {
+          color: $def-color;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      input[type="submit"] {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding: 15px;
+        background-color: $def-color;
+        border: 1px solid $def-color;
+        color: $hl-color;
+        font-size: 13px;
+
+        &:hover {
+          background-color: $hl-color;
+          color: $def-color;
+        }
+      }
+    }
+  }
+
+
 }

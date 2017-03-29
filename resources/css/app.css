@@ -7,29 +7,32 @@
 ********************************************************************
 */
 @font-face {
-  font-family: "Quicksand_Book";
-  src: url("../fonts/Quicksand_Book.otf"); }
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand_Book.otf");
+  font-weight: normal; }
 
 @font-face {
-  font-family: "Quicksand_Bold";
-  src: url("../fonts/Quicksand_Bold.otf"); }
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand_Bold.otf");
+  font-weight: bold; }
 
 @font-face {
-  font-family: "Quicksand_Light";
-  src: url("../fonts/Quicksand_Light.otf"); }
+  font-family: Quicksand;
+  src: url("../fonts/Quicksand_Light.otf");
+  font-weight: 300; }
 
-section.portfolio .sec-tabs:before, section.portfolio .sec-tabs:after {
+.nav-menu:before, section.portfolio .sec-tabs:before, .nav-menu:after, section.portfolio .sec-tabs:after {
   content: ' ';
   display: table; }
 
-section.portfolio .sec-tabs:after {
+.nav-menu:after, section.portfolio .sec-tabs:after {
   clear: both; }
 
 * {
   transition: 0.3s; }
 
 body {
-  font-family: Quicksand_Book;
+  font-family: Quicksand;
   background-color: #f9f0ff; }
 
 main {
@@ -42,6 +45,45 @@ svg .cls-1 {
   fill: #232323;
   fill-rule: evenodd; }
 
+.nav-menu {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9; }
+  .nav-menu ul {
+    float: left;
+    padding: 0;
+    margin: 0; }
+    .nav-menu ul li {
+      margin-bottom: 5px; }
+      .nav-menu ul li:last-child {
+        margin-bottom: 0; }
+      .nav-menu ul li a {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: transparent;
+        text-decoration: none;
+        padding-left: 25px; }
+        .nav-menu ul li a:hover {
+          color: #232323; }
+        .nav-menu ul li a:before {
+          position: absolute;
+          top: 50%;
+          left: 6px;
+          transform: translateY(-50%);
+          height: 13px;
+          width: 13px;
+          border-radius: 50%;
+          border: 1px solid #232323;
+          content: ' '; }
+      .nav-menu ul li.active a {
+        color: #232323; }
+        .nav-menu ul li.active a:before {
+          background-color: #232323; }
+
 section {
   width: 100%;
   position: relative;
@@ -52,7 +94,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  section.home .logo, section.home p {
+  section.home .logo-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,10 +103,15 @@ section {
     display: block;
     margin: 0 auto;
     width: 820px; }
-  section.home .logo {
-    top: 38%; }
+  section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  section.home .logo-container h1 {
+    text-align: center; }
   section.home p {
-    top: 65%;
     text-align: center;
     font-size: 20px; }
   section.portfolio .sec-tabs {
@@ -78,21 +125,21 @@ section {
       padding-left: 0px; }
     section.portfolio .sec-tabs li.active a {
       box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #232323, -1px -1px 0 #232323;
-      font-family: Quicksand_Book; }
+      font-weight: normal; }
     section.portfolio .sec-tabs li.active:first-child a {
       box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #f9f0ff, -1px -1px 0 #f9f0ff; }
     section.portfolio .sec-tabs li a {
       display: block;
       padding: 10px 10px 0 10px;
-      font-size: 30px;
+      font-size: 27px;
       text-decoration: none;
       display: block;
       text-transform: uppercase;
       color: #232323;
-      font-family: Quicksand_Light; }
+      font-weight: 300; }
       section.portfolio .sec-tabs li a:hover {
         color: inherit;
-        font-family: Quicksand_Book; }
+        font-weight: normal; }
   section.portfolio .container-tabs ul {
     display: -ms-flexbox;
     display: flex;
@@ -122,3 +169,71 @@ section {
         border-top: 1px solid #232323;
         padding: 5px;
         text-align: center; }
+  section.skillset .sub-text {
+    border-bottom: 1px solid #232323;
+    font-size: 13px; }
+  section.skillset .link-text {
+    font-size: 13px; }
+    section.skillset .link-text a {
+      color: #232323;
+      font-weight: bold;
+      font-size: 14px; }
+  section.skillset .chart-container {
+    margin-bottom: 15px; }
+  section.contact .contact-info {
+    margin-top: 29px; }
+  section.contact p {
+    margin-bottom: 5px; }
+  section.contact .bordered {
+    display: block;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #232323;
+    border: 1px solid #232323;
+    color: #f9f0ff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none; }
+    section.contact .bordered:hover {
+      background-color: #f9f0ff;
+      color: #232323; }
+  section.contact h3 {
+    font-size: 18px;
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold; }
+  section.contact .form-container input,
+  section.contact .form-container textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 1px solid #232323;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 5px;
+    font-size: 12px;
+    margin-bottom: 15px; }
+    section.contact .form-container input::-webkit-input-placeholder,
+    section.contact .form-container textarea::-webkit-input-placeholder {
+      color: #232323; }
+    section.contact .form-container input:-ms-input-placeholder,
+    section.contact .form-container textarea:-ms-input-placeholder {
+      color: #232323; }
+    section.contact .form-container input::placeholder,
+    section.contact .form-container textarea::placeholder {
+      color: #232323; }
+    section.contact .form-container input:focus,
+    section.contact .form-container textarea:focus {
+      outline: 0; }
+  section.contact .form-container input[type="submit"] {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #232323;
+    border: 1px solid #232323;
+    color: #f9f0ff;
+    font-size: 13px; }
+    section.contact .form-container input[type="submit"]:hover {
+      background-color: #f9f0ff;
+      color: #232323; }
