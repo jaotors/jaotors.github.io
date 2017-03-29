@@ -21,11 +21,11 @@
   src: url("../fonts/Quicksand_Light.otf");
   font-weight: 300; }
 
-.nav-menu:before, section.portfolio .sec-tabs:before, .nav-menu:after, section.portfolio .sec-tabs:after {
+.nav-menu:before, section.portfolio .sec-tabs:before, section.experience .exp-list:before, .nav-menu:after, section.portfolio .sec-tabs:after, section.experience .exp-list:after {
   content: ' ';
   display: table; }
 
-.nav-menu:after, section.portfolio .sec-tabs:after {
+.nav-menu:after, section.portfolio .sec-tabs:after, section.experience .exp-list:after {
   clear: both; }
 
 * {
@@ -94,7 +94,7 @@ section {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  section.home .logo-container {
+  section.home .logo-container, section.skillset .inner, section.contact .inner {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -114,6 +114,8 @@ section {
   section.home p {
     text-align: center;
     font-size: 20px; }
+  section.portfolio .inner {
+    margin-top: 49px; }
   section.portfolio .sec-tabs {
     display: -ms-flexbox;
     display: flex;
@@ -129,7 +131,6 @@ section {
     section.portfolio .sec-tabs li.active:first-child a {
       box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #f9f0ff, -1px -1px 0 #f9f0ff; }
     section.portfolio .sec-tabs li a {
-      display: block;
       padding: 10px 10px 0 10px;
       font-size: 25px;
       text-decoration: none;
@@ -137,6 +138,8 @@ section {
       text-transform: uppercase;
       color: #232323;
       font-weight: 300; }
+      section.portfolio .sec-tabs li a:focus {
+        outline: 0; }
       section.portfolio .sec-tabs li a:hover {
         color: inherit;
         font-weight: bold; }
@@ -180,6 +183,33 @@ section {
       font-size: 14px; }
   section.skillset .chart-container {
     margin-bottom: 15px; }
+  section.experience h4 {
+    text-align: center; }
+  section.experience .exp-list {
+    border-top: 2px solid #232323;
+    width: 100%;
+    padding: 0;
+    list-style: none; }
+    section.experience .exp-list li {
+      position: relative;
+      float: left;
+      width: 20%; }
+      section.experience .exp-list li:first-child:before, section.experience .exp-list li:last-child:before {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #232323;
+        content: ' '; }
+      section.experience .exp-list li:first-child:before {
+        top: -6px;
+        left: -5px; }
+      section.experience .exp-list li:last-child:before {
+        top: -6px;
+        right: -5px; }
+      section.experience .exp-list li span {
+        display: block;
+        position: absolute; }
   section.contact .contact-info {
     margin-top: 29px; }
   section.contact p {

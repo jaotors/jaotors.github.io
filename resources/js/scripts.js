@@ -5,7 +5,7 @@ $(document).ready(function() {
         anchors:['home', 'portfolio', 'skillset', 'experience', 'contact'],
         menu: '.nav-menu ul',
 
-        verticalCentered: false,
+        verticalCentered: true,
         sectionSelector: 'section.module'
     });
     /* END FULL PAGE */

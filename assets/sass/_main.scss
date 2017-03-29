@@ -136,6 +136,10 @@ section {
 
   &.portfolio {
 
+    .inner {
+      margin-top: 49px;
+    }
+
     .sec-tabs {
       @extend %clearfix;
 
@@ -181,7 +185,6 @@ section {
         }
 
         a {
-          display: block;
           padding: 10px 10px 0 10px;
           font-size: 25px;
           text-decoration: none;
@@ -189,6 +192,10 @@ section {
           text-transform: uppercase;
           color: $def-color;
           font-weight: 300;
+
+          &:focus {
+            outline: 0;
+          }
 
           &:hover {
             color: inherit;
@@ -248,6 +255,10 @@ section {
 
   &.skillset {
 
+    .inner {
+      @extend %centering;
+    }
+
     .sub-text {
       border-bottom: 1px solid $def-color;
       font-size: 13px;
@@ -269,7 +280,58 @@ section {
     }
   }
 
+  &.experience {
+
+    h4 {
+      text-align: center;
+    }
+
+    .exp-list {
+      border-top: 2px solid $def-color;
+      width: 100%;
+      padding: 0;
+      list-style: none;
+
+      @extend %clearfix;
+
+      li {
+        position: relative;
+        float: left;
+        width: 20%;
+
+        &:first-child:before,
+        &:last-child:before {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $def-color;
+          content: ' ';
+        }
+
+        &:first-child:before {
+          top: -6px;
+          left: -5px;
+        }
+
+        &:last-child:before {
+          top: -6px;
+          right: -5px;
+        }
+
+        span {
+          display: block;
+          position: absolute;
+        }
+      }
+    }
+  }
+
   &.contact {
+
+    .inner {
+      @extend %centering;
+    }
 
     .contact-info {
       margin-top: 29px;
