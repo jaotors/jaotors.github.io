@@ -73,4 +73,15 @@ $(document).ready(function() {
                         });
     /* END SKILL CHART */
 
+    /* data tabs */
+    $('.container-tabs').hide();
+    $('.container-tabs.active').show();
+    $('.sec-tabs a').click(function() {
+        var num = $(this).attr('data-tab');
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        $('.container-tabs').hide();
+        $('.container-tabs.cont' + num).fadeIn().addClass('active');
+    });
+    /* end data tabs */
+
 })

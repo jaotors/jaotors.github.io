@@ -125,13 +125,13 @@ section {
       padding-left: 0px; }
     section.portfolio .sec-tabs li.active a {
       box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #232323, -1px -1px 0 #232323;
-      font-weight: normal; }
+      font-weight: bold; }
     section.portfolio .sec-tabs li.active:first-child a {
       box-shadow: 0 1px 0 #f9f0ff, 1px 0 0 #232323, 1px -1px 0 #232323, 1px -1px 0 #232323, -1px 0 0 #f9f0ff, -1px -1px 0 #f9f0ff; }
     section.portfolio .sec-tabs li a {
       display: block;
       padding: 10px 10px 0 10px;
-      font-size: 27px;
+      font-size: 25px;
       text-decoration: none;
       display: block;
       text-transform: uppercase;
@@ -139,7 +139,7 @@ section {
       font-weight: 300; }
       section.portfolio .sec-tabs li a:hover {
         color: inherit;
-        font-weight: normal; }
+        font-weight: bold; }
   section.portfolio .container-tabs ul {
     display: -ms-flexbox;
     display: flex;
