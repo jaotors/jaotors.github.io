@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@utility container {
+  @apply max-w-4xl mx-auto px-4 py-10;
+}
+
+@utility btn {
+  @apply border-2 shadow-neo-lg min-w-[150px] px-5 py-2.5 font-syne text-lg text-center;
+}
+
+@utility btn-primary {
+  @apply btn bg-primary color-base hover:brightness-75;
+}
+
+@utility btn-secondary {
+  @apply btn bg-secondary color-base hover:brightness-75;
+}
+
+@utility color-primary {
+  color: #ff007f;
+}
+
+@utility bg-primary {
+  background-color: #ff007f;
+}
+
+@utility color-secondary {
+  color: #00ff8d;
+}
+
+@utility bg-secondary {
+  background-color: #00ff8d;
+}
+
+@utility color-base {
+  color: #1f1f1f;
+}
+
+@utility bg-base {
+  background-color: #1f1f1f;
+}
+
+@utility highlight-text {
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+  letter-spacing: -2px;
+}
+
+@utility font-syne {
+  font-optical-sizing: auto;
+  font-family: 'Syne', sans-serif;
+}
+
+@utility font-karla {
+  font-optical-sizing: auto;
+  font-family: 'Karla', sans-serif;
+}
+
+@utility shadow-neo {
+  box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+}
+
+@utility shadow-neo-lg {
+  box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
+    5px 5px 0 #000;
+}
