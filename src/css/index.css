@@ -1,11 +1,15 @@
 @import 'tailwindcss';
 
 @utility container {
-  @apply max-w-4xl mx-auto px-4 py-10;
+  @apply max-w-4xl px-4 mx-auto;
 }
 
 @utility btn {
-  @apply border-2 shadow-neo-lg min-w-[150px] px-5 py-2.5 font-syne text-lg text-center;
+  @apply block border-2 shadow-neo-lg min-w-[150px] px-5 py-2.5 font-syne text-lg text-center;
+}
+
+@utility btn-reverse {
+  @apply btn shadow-neo-lg-reverse;
 }
 
 @utility btn-primary {
@@ -40,10 +44,12 @@
   background-color: #1f1f1f;
 }
 
+@utility bg-dark-light {
+  background-color: #d7d9d7;
+}
+
 @utility highlight-text {
-  -webkit-text-stroke: 1px #000;
-  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
-  letter-spacing: -2px;
+  @apply border-2 border-black font-extrabold shadow-neo-reverse;
 }
 
 @utility font-syne {
@@ -51,16 +57,29 @@
   font-family: 'Syne', sans-serif;
 }
 
-@utility font-karla {
+@utility font-sora {
   font-optical-sizing: auto;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Sora', sans-serif;
 }
 
 @utility shadow-neo {
   box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
 }
 
+@utility shadow-neo-reverse {
+  box-shadow: -1px 1px 0 #000, -2px 2px 0 #000, -3px 3px 0 #000;
+}
+
 @utility shadow-neo-lg {
   box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
     5px 5px 0 #000;
+}
+
+@utility shadow-neo-lg-reverse {
+  box-shadow: -1px 1px 0 #000, -2px 2px 0 #000, -3px 3px 0 #000, -4px 4px 0 #000,
+    -5px 5px 0 #000;
+}
+
+@utility card {
+  @apply pt-4 pb-6 px-6 shadow-neo-lg border-3 border-black;
 }
