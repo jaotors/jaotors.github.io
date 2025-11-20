@@ -171,7 +171,7 @@
               href="https://www.w3.org/html/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/html5.svg"
                 width="40"
@@ -182,7 +182,7 @@
               href="https://www.w3schools.com/css/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/css3.svg"
@@ -194,7 +194,7 @@
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/javascript.svg"
@@ -206,7 +206,7 @@
               href="https://reactjs.org/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/react.svg"
@@ -218,7 +218,7 @@
               href="https://nextjs.org"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/next-dot-js.svg"
                 width="40"
@@ -229,7 +229,7 @@
               href="https://www.typescriptlang.org/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/typescript.svg"
@@ -242,7 +242,7 @@
               href="https://git-scm.com/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/git.svg"
@@ -254,7 +254,7 @@
               href="https://tailwindcss.com/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/tailwindcss.svg"
@@ -267,7 +267,7 @@
               href="https://sass-lang.com"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
             >
               <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/sass.svg"
@@ -280,7 +280,7 @@
               href="https://nextjs.org"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/svelte.svg"
                 width="40"
@@ -291,7 +291,7 @@
               href="https://svelte.dev/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/csharp.svg"
                 width="40"
@@ -302,7 +302,7 @@
               href="https://umbraco.com/"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/umbraco.svg"
                 width="40"
@@ -313,7 +313,7 @@
               href="https://nodejs.org/en"
               target="_blank"
               rel="noreferrer"
-              class="tech-icons"
+              class="tech-icons transition-shadow hover:shadow-[none]"
               ><img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/node-dot-js.svg"
                 width="40"
@@ -329,5 +329,12 @@
         <p data-id="copyright" class="font-syne text-center">&copy;</p>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      const copyrightElem = document.querySelector('[data-id="copyright"]')
+      const yearNow = new Date().getFullYear()
+      const name = 'Jao Turingan'
+      copyrightElem.append(`${yearNow} ${name}`)
+    </script>
   </body>
 </html>
